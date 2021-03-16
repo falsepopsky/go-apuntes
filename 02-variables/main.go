@@ -12,32 +12,31 @@ Las variables que se declaran y no se utilicen en otro scope que no sea el packa
 
 var (
 	juego string = "Silent Hill"
-	compania     string = "Konami"
+	compania string = "Konami"
 	fechaDeLanzamiento int = 1999
 	creador string
 )
 
 
 func main() {
-	fmt.Printf("%T\n", juego) // %T muestra el tipo de dato.
-	fmt.Printf("%v\n", compania) // %v muestra el valor.
+	fmt.Printf("El tipo de dato de la variable juego es: %T\n", juego) // %T muestra el tipo de dato.
+	fmt.Printf("El valor de la variable compania es: %v\n", compania) // %v muestra el valor.
 
-	// Iniciando la variable que fue declarado a nivel del package
-
-	creador = "Keiichiro Toyama"
+	creador = "Keiichiro Toyama" // Iniciando la variable que fue declarado a nivel del package
 	fmt.Println(creador)
 
 	/*  
-	las variables no se pueden redeclarar, dentro de un mismo scope sin embargo,
+	las variables no se pueden redeclarar dentro de un mismo scope sin embargo,
 	cuando es una variable a nivel de package se permite (no funciona con la asignación corta := ).
 	*/
 
-	fmt.Println(fechaDeLanzamiento)
+	fmt.Println(fechaDeLanzamiento) // fecha original
 	fechaDeLanzamiento = 2021
-	fmt.Println(fechaDeLanzamiento)
-	fechaDeLanzamiento = 1900
-	fmt.Println(fechaDeLanzamiento)
-	
+	fmt.Println(fechaDeLanzamiento) // fecha modificada
+
+	var texto string = juego + " fue creado por " + creador + " y publicado por la compañia japonesa: " + compania
+	fmt.Println(texto)
+
 	otroJuego := "Metal Gear Solid"
 	fmt.Println(otroJuego)
 

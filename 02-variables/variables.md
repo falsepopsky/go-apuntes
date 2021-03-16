@@ -33,11 +33,19 @@ Entre ellos tenemos los más importantes como:
 - Float32
 - Float64
 
-Entre otros para más información [click acá...](https://golang.org/pkg/go/types/)
+Entre otros... para más información [click acá...](https://golang.org/pkg/go/types/)
+
+## Valores por defecto
+
+Cuando declaramos una variable sin especificar su valor, por defecto toma el valor `zero`.
+
+Los de tipo Int `0`, String `""`, Bool `false`, etc.
+
+[Leer más sobre el valor zero](https://golang.org/ref/spec#The_zero_value)
 
 ## Escribiendo variables
 
-Existe distintas formas de declarar, inicializar o ambas una variable. Para ello lo separe en 3 grupos.
+Existe distintas formas de declarar, inicializar o realizar ambas en una variable. Para ello lo separe en 3 grupos.
 
 - ### **Por lista**
 
@@ -76,13 +84,13 @@ age := 16
 
 ---
 
-Si prestaste atención te diste cuenta que en algunas declaraciones se usa el tipo `string` o `int` y en otras no, además de la declaración de tipo `:=`, pero vamos por parte.
+Si prestaste atención te diste cuenta que en algunas declaraciones se usa el tipo de dato que acepta la variable `string` o `int` y en otras no, además de la declaración de tipo `:=`, pero vamos por parte.
 
-- Tipado
+- Tipado `string`, `int`, etc.
 
 Cuando asignamos un tipo a una variable esperamos que el valor declarado sea el correspondido, caso contrario en tiempo de compilación arrojará un error.
-Sin embargo cuando no lo declaramos, Go al momento de compilar asume que tipo le asignará dependiendo su tipo de valor.
+Sin embargo cuando tenemos un valor y no lo declaramos, Go al momento de compilar asume que tipo le asignará dependiendo su tipo de valor.
 
-- Asignación corta
+- Asignación corta `:=`
 
 Esta declaración se puede usar dentro de una función sin la especificación de usar `var` y un tipo.
